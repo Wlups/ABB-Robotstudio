@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Metadata Version="1">
+  <Id>4bd453ee4a4441e98615812aa74ec164</Id>
+  <Name>Recording-1</Name>
+  <EventCount>1</EventCount>
+  <StartedUtc>2025-03-29T19:55:17.4042999Z</StartedUtc>
+  <EndedUtc>2025-03-29T19:55:26.8378789Z</EndedUtc>
+  <TotalTime>0</TotalTime>
+  <Signals />
+  <Sources>
+    <Source type="Station" id="{6ae33f80-2cac-4130-b1fa-4824cd4ad697}" displayName="ABB_Simulatsioon1" />
+  </Sources>
+</Metadata>

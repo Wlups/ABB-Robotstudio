@@ -1,0 +1,104 @@
+MODULE Module1
+    CONST robtarget Home:=[[624.438234891,136.898577549,718.16254704],[0.083448839,0.853960657,0.500049797,0.11720788],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kaamera_Kontroll1:=[[823.999822834,-392.149885078,515.115078467],[0.500000077,0.866025359,-0.000000271,-0.000000033],[-1,1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kaamera_Kontroll2:=[[823.99956152,-557.150115019,515.115372568],[0.500000401,0.866025172,-0.000000055,-0.000000089],[-1,1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kruvi1:=[[435.773415754,-501.680709441,345.539232334],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kruvi1Kohal:=[[435.773462693,-501.680676163,353.539305771],[0.000000048,1,-0.000000288,0.000000324],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kruvi2:=[[435.773,-441.681,345.539],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kruvi2Kohal:=[[435.7699882,-441.680010312,353.539989026],[-0.000000023,1,-0.000000024,0.000000018],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kruvi3:=[[435.773,-381.681,345.539],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kruvi3Kohal:=[[435.769987813,-381.67998072,353.539970582],[-0.000000018,1,0.000000005,-0.000000012],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kruvi4:=[[435.773,-321.681,345.539],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Kruvi4Kohal:=[[435.769991737,-321.679984075,353.539981013],[0.000000016,1,0.00000006,-0.000000014],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat1Ava1:=[[776.7,-278,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat1Ava1Kohal:=[[776.699988596,-278.000008446,324.99997644],[0.000000006,1,-0.000000012,-0.000000015],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat1Ava2:=[[776.7,-256,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat1Ava2Kohal:=[[776.700008221,-255.999999816,324.999992221],[-0.000000033,1,-0.000000036,0.000000011],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat1Ava3:=[[913.7,-278,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat1Ava3Kohal:=[[913.699949436,-278.000016466,325.000003515],[0.000000045,1,0.000000018,-0.000000009],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat1Ava4:=[[913.7,-256,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat1Ava4Kohal:=[[913.699959848,-256.000000869,324.999974095],[-0.000000001,1,0.000000016,-0.000000006],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat2Ava1:=[[689,-219.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat2Ava1Kohal:=[[689.00000639,-219.499994539,324.999995823],[-0.000000032,1,-0.000000037,0.000000009],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat2Ava2:=[[689,-82.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat2Ava2Kohal:=[[688.999990388,-82.500005343,324.999986755],[0.000000005,1,0.000000004,-0.000000001],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat2Ava3:=[[711,-219.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat2Ava3Kohal:=[[711.000015543,-219.500016054,325.000003962],[0.000000018,1,0.000000009,0.000000011],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat2Ava4:=[[711,-82.5,302.3],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat2Ava4Kohal:=[[711.000006872,-82.499995857,324.999991213],[-0.000000017,1,-0.000000018,-0.000000007],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat3Ava1:=[[789,-219.5,302.3],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat3Ava1Kohal:=[[788.999954385,-219.500007427,324.999989863],[-0.000000007,1,-0.000000018,-0.000000001],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat3Ava2:=[[789,-82.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat3Ava2Kohal:=[[788.999960308,-82.500019594,324.999989448],[0.000000038,1,0.000000031,0.000000002],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat3Ava3:=[[811,-219.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat3Ava3Kohal:=[[810.999956974,-219.49999925,324.999974055],[0,1,0,-0.000000021],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat3Ava4:=[[811,-82.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat3Ava4Kohal:=[[810.999978006,-82.499999129,324.999991294],[-0.000000014,1,-0.00000001,0.000000008],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat4Ava1:=[[889,-219.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat4Ava1Kohal:=[[888.999969588,-219.500011208,325.000002169],[0.000000027,1,0.000000013,-0.000000009],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat4Ava2:=[[889,-82.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat4Ava2Kohal:=[[888.999978236,-82.500004985,325.000008624],[0.00000001,1,0.000000004,0.000000004],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat4Ava3:=[[911,-219.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat4Ava3Kohal:=[[911.000006802,-219.500006563,325.000022867],[-0.000000006,1,-0.000000006,0.000000026],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat4Ava4:=[[911,-82.5,302],[0,1,0,0],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Plaat4Ava4Kohal:=[[910.999983403,-82.499984451,324.99998112],[-0.000000039,1,-0.000000025,-0.000000012],[-1,1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    VAR bool skip := TRUE;
+    PROC main()
+    WHILE SKIP DO
+        tase0;
+    ENDWHILE
+        TPWrite "Simulatsioon algab!";
+      AlgsedSignaalid;
+      LiigutaToodePaika;
+      AlustaSimulatsioon;
+      ToodeValmis;  
+    ENDPROC
+
+    !Sätestan esialgsed signaalid, et simulatsioon toimiks ilma vigadeta
+    PROC AlgsedSignaalid()
+        TPWrite "Algsete signaalide seadistamine";
+        SetDO DO_Gripper, 0;
+        SetDO DO_AnnaKruvi2, 0;
+        SetDO DO_AlustaAnimatsioon, 0;
+        SetDO DO_LiigutaToodet, 0;
+        TPWrite "Algsete signaalide seadistamine lõppenud";
+    ENDPROC
+    !Toode liigub kuni esimene sensor tuvastab toote
+    PROC LiigutaToodePaika()
+        TPWrite "Konveier töötab";
+        PulseDO DO_AlustaAnimatsioon;
+        WaitTime 0.5;
+        SetDO DO_LiigutaToodet, 1;
+        WaitDI DI_ToodeOnPositsioonil, 1;
+        TPWrite "Sensor tuvastas toote. Konveier peatatud";
+        SetDO DO_LiigutaToodet, 0;
+        WaitTime 0.5;
+    ENDPROC
+    !Toode liigub kuni teine sensor tuvastab toote
+    PROC ToodeValmis()
+        TPWrite "Toote kruvimine lõppenud. Konveier töötab";
+        SetDO DO_LiigutaToodet, 1;
+        WaitDI DI_ToodeLopp, 1;
+        SetDO DO_LiigutaToodet, 0;
+        TPWrite "Simulatsioon lõppenud";
+        WaitDI DI_ToodeLopp1, 1; !Signaal, mis ei lase simulatsioonil lõppeda. Seda loogikas ei kasuta
+    ENDPROC
+    PROC AlustaSimulatsioon()
+        MoveJ Home, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+        TPWrite "Kontrollin kaameraga punktid üle";
+        MoveL Kaamera_Kontroll1, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+        WaitTime 1;
+        MoveL Kaamera_Kontroll2, v200, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+        TPWrite "Punktid ülevaadatud. Alustan toote koostamist";
+        WaitTime 1;
+        PulseDO DO_AnnaKruvi2;
+        plaat1;
+        PulseDO DO_AnnaKruvi2;
+        plaat2;
+        PulseDO DO_AnnaKruvi2;
+        plaat3;
+        PulseDO DO_AnnaKruvi2;
+        plaat4;
+        PingutaPlaadid;
+    ENDPROC
+ENDMODULE

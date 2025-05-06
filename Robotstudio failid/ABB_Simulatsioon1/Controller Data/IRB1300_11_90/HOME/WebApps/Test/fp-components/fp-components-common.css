@@ -1,0 +1,329 @@
+
+/*
+
+(c) Copyright 2020 ABB
+
+Any unauthorized use, reproduction, distribution,
+or disclosure to third parties is strictly forbidden.
+ABB reserves all rights regarding Intellectual Property Rights
+
+*/
+
+:root {
+
+    --fp-color-STD-BACKGROUND:          #FFFFFF;
+    --fp-color-PRIMARY-TEXT:            #000000;
+    --fp-color-SECONDARY-TEXT:          #696969;
+
+    --fp-color-GRAY-10:                 #EBEBEB;
+    --fp-color-GRAY-20:                 #DBDBDB;
+    --fp-color-GRAY-30:                 #BABABA;
+    --fp-color-GRAY-40:                 #9F9F9F;
+    --fp-color-GRAY-50:                 #868686;
+    --fp-color-GRAY-60:                 #696969;
+    --fp-color-GRAY-70:                 #464646;
+    --fp-color-GRAY-80:                 #333333;
+    --fp-color-GRAY-90:                 #1F1F1F;
+    --fp-color-GRAY-100:                #0F0F0F;
+       
+    --fp-color-BLUE-10:                 #E0F0FF;    
+    --fp-color-BLUE-20:                 #C5E0FA;    
+    --fp-color-BLUE-30:                 #9EBFF7;    
+    --fp-color-BLUE-40:                 #77A3FC;    
+    --fp-color-BLUE-50:                 #4C85FF;    
+    --fp-color-BLUE-60:                 #3366FF;  
+    --fp-color-BLUE-70:                 #2A35FF;  
+    --fp-color-BLUE-80:                 #2C20D4;  
+    --fp-color-BLUE-90:                 #160C9C;  
+    --fp-color-BLUE-100:                #080261;  
+    
+    --fp-color-BLUE-PRIMARY-HIGHLIGHT:  #3366FF;
+
+    --fp-color-GREEN-OK:                #0CA919;
+    --fp-color-YELLOW-WARNING:          #FFD800;
+    --fp-color-RED-DANGER:              #F03040;
+
+
+}
+
+body {
+    font-family: "Segoe UI", "Verdana", "sans-serif";
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fp-components-base {
+    font-family: "Segoe UI", "Verdana", "sans-serif";
+    color: black;
+    background-color: white;
+    font-size: 18px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+.fp-components-common-icon-32 {
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.fp-components-common-icon-40 {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.fp-components-common-icon-48 {
+    max-width: 48px;
+    max-height: 48px;
+}
+
+/******* ON-SCREEN KEYBOARD ********/
+
+.fp-components-keyboard-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.6);
+}
+
+.fp-components-keyboard {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: calc((100vw - 1024px) / 2);
+    z-index: 100;
+    width: 1024px;
+    height: 481px;
+    background-color: rgb(190, 190, 190);
+    font-family: "Segoe UI", "Verdana", "sans-serif";
+    color: black;    
+    box-shadow: 0 0 5px  #222222;
+}
+
+.fp-components-keyboard-toparea {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 80px;
+    justify-content: flex-start;
+}
+
+.fp-components-keyboard-label {
+    height: 120px;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.fp-components-keyboard-input {
+    appearance: none;
+    font-size: 36px;
+    font-family: "Consolas", "Courier", "monospace";
+    height: 65px;
+    color: black;
+    font-weight: bold;
+    margin-right: 40px;
+    margin-left:  15px;
+    margin-top: 15px;
+    margin-bottom: auto;
+    padding-left: 10px;
+    /*text-align: center;*/
+    flex-grow: 1;
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+    border-color: rgb(160, 160, 160);
+}
+
+.fp-components-keyboard-input::-ms-clear {
+    display: none;
+}
+
+.fp-components-keyboard-x {
+    margin-right: 10px;
+    margin-top: 12px;
+    padding: 20px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 36px;
+}
+
+.fp-components-keyboard-x:hover {    
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(97,97,97);
+    padding: 18px;
+}
+
+.fp-components-keyboard-x:active {
+    background: rgb(97,97,97);
+}
+
+.fp-components-keyboard-row {
+    display: flex;
+    height: 65px;
+    margin-bottom: 5px;
+}
+
+.fp-components-keyboard-button {
+    display: inline-flex;
+    height: 100%;
+    width: 77px;
+    margin-left: 5px;
+    /*background-color: rgb(238,238,238);*/
+    background-image: linear-gradient(white, rgb(238,238,238), rgb(238,238,238));
+    align-items: center;
+    justify-content: center;
+    color: black;
+    /*font-size: 24px;*/
+    font-size: 32px;    
+    border-radius: 4px;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.8);
+}
+
+.fp-components-keyboard-button > span {
+    vertical-align: text-bottom;
+}
+
+.fp-components-keyboard-button.fp-components-keyboard-button-smalltxt {
+    font-size: 20px;
+}
+
+.fp-components-keyboard-button.fp-components-keyboard-button-blue {
+    /*background-color: rgb(0,120,215);*/
+    background-image: linear-gradient(rgb(0,130,232), rgb(0,120,215), rgb(0,120,215));
+    color: white;
+}
+
+.fp-components-keyboard-button.fp-components-keyboard-ok {
+    transition: opacity 0.15s linear;
+}
+
+.fp-components-keyboard-button.fp-components-keyboard-button-dark {
+    /*background-color: rgb(97, 97, 97);*/
+    background-image: linear-gradient(rgb(114,114,114), rgb(97, 97, 97), rgb(97, 97, 97));
+    color: white;
+}
+
+/*
+.fp-components-keyboard-button:hover{
+    color: black;
+}
+*/
+
+.fp-components-keyboard-button:active{
+    background-image: none;
+    background-color: rgb(145,193,231);
+}
+
+/******* DEBUG WINDOW ********/
+
+#fp-debugwindow {
+    display: none;
+    position: fixed;
+    z-index: 2147483647;
+    left: 50px;
+    top: 50px;
+    max-width: calc(100vw - 100px);
+    min-width: calc(100vw - 100px);
+    max-height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+    background-color: black;
+    color: ghostwhite;
+    padding: 0;
+    font-family: 'Consolas', 'Courier New', 'Courier', 'monospace';
+    font-size: 16px;
+    box-shadow: 0px 0px 10px  #222222;
+    border-radius: 5px;
+}
+
+#fp-debugwindow-grid {
+    display: grid;
+    grid-template-areas:    'fp-debugwindow-gridarea-content'
+                            'fp-debugwindow-gridarea-menu';
+    grid-template-columns: auto;
+    grid-template-rows: calc(100vh - 100px - 50px) 50px ;
+    margin: 0;
+    padding: 0;
+}
+
+#fp-debugwindow-content {
+    overflow-y: auto;
+    grid-area: fp-debugwindow-gridarea-content;
+    height: calc(100vh - 100px - 50px - 10px);
+    margin: 0;
+    padding: 5px;
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+#fp-debugwindow-content > p {
+    padding: 0;
+    margin: 0;
+}
+
+#fp-debugwindow-menu {
+    grid-area: fp-debugwindow-gridarea-menu;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+#fp-debugwindow-clock {
+    margin: 0;
+}
+
+.fp-debugwindow-button  {
+    background-color: rgb(58, 58, 58);
+    color: ghostwhite;
+    pointer-events: all;
+    display: inline-block;
+    border-style: groove;
+    border-color: rgb(120,120,120);
+    border-radius: 5px;
+    border-width: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 12px;
+    min-width: 120px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fp-debugwindow-button:active  {
+    background-color: rgb(120, 120, 120);
+}
+
+#fp-debugwindow-minimized {
+    z-index: 2147483647;
+    background-color: rgb(206, 206, 206);
+    opacity: 0.5;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px  #222222;
+    
+}
+
+

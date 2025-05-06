@@ -1,0 +1,29 @@
+MODULE pingutamine
+    CONST robtarget kohad{4,4} := [
+    [Plaat1Ava1Kohal, Plaat1Ava2Kohal, Plaat1Ava3Kohal, Plaat1Ava4Kohal],
+    [Plaat2Ava1Kohal, Plaat2Ava2Kohal, Plaat2Ava3Kohal, Plaat2Ava4Kohal],
+    [Plaat3Ava1Kohal, Plaat3Ava2Kohal, Plaat3Ava3Kohal, Plaat3Ava4Kohal],
+    [Plaat4Ava1Kohal, Plaat4Ava2Kohal, Plaat4Ava3Kohal, Plaat4Ava4Kohal]
+];
+CONST robtarget avad{4,4} := [
+    [Plaat1Ava1, Plaat1Ava2, Plaat1Ava3, Plaat1Ava4],
+    [Plaat2Ava1, Plaat2Ava2, Plaat2Ava3, Plaat2Ava4],
+    [Plaat3Ava1, Plaat3Ava2, Plaat3Ava3, Plaat3Ava4],
+    [Plaat4Ava1, Plaat4Ava2, Plaat4Ava3, Plaat4Ava4]
+];
+PROC PingutaPlaadid()
+    VAR num plaadiJrk{4} := [1,4,3,2];
+    VAR num avaJrk{4,4} := [[3,2,1,4],[3,2,4,1],[3,2,4,1],[3,2,4,1]];
+
+    FOR i FROM 1 TO 4 DO
+        TPWrite "plaadi " + NumToStr(plaadiJrk{i}, 0) + " pingutamine";
+        FOR j FROM 1 TO 4 DO
+            MoveL kohad{plaadiJrk{i}, avaJrk{i,j}}, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+            MoveL avad{plaadiJrk{i}, avaJrk{i,j}}, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+            WaitTime 1.5;
+            MoveL kohad{plaadiJrk{i}, avaJrk{i,j}}, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+        ENDFOR
+    ENDFOR
+    MoveJ Home, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+ENDPROC
+ENDMODULE

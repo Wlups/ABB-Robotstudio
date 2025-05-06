@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WebApp>
+    <name>Simulatsioon</name>
+    <icon>icons/gear.png</icon>
+    <path>IRB1300.html</path>
+</WebApp>

@@ -1,0 +1,35 @@
+
+/*
+
+(c) Copyright 2020 ABB
+
+Any unauthorized use, reproduction, distribution,
+or disclosure to third parties is strictly forbidden.
+ABB reserves all rights regarding Intellectual Property Rights
+
+*/
+
+.fp-components-digital-a {
+
+    margin: 3px;
+    width: 24px;
+    height: 24px;
+
+    font-weight: bold;
+    font-size: 18px;   
+    text-align: center;
+    
+    color: white;
+    background-color: #b2b2b2;
+
+    border-radius: 13px;
+    border-style: solid;
+    border-color: #f0f0f0;
+    border-width: 2px;
+
+    transition: all 0.15s linear;
+}
+
+.fp-components-digital-a.fp-components-digital-a-active {
+    background-color: #f5bf5c;
+}

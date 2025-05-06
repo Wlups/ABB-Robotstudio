@@ -1,0 +1,75 @@
+MODULE Kruvimine
+CONST robtarget KruviKohal{4} := [Kruvi1Kohal,Kruvi2Kohal,Kruvi3Kohal,Kruvi4Kohal];
+CONST robtarget Kruvi{4} := [Kruvi1,Kruvi2,Kruvi3,Kruvi4];
+
+CONST robtarget PlaadiAvad{4,4} := [
+    [Plaat1Ava1, Plaat1Ava4, Plaat1Ava2, Plaat1Ava3],
+    [Plaat2Ava1, Plaat2Ava4, Plaat2Ava2, Plaat2Ava3],
+    [Plaat3Ava1, Plaat3Ava4, Plaat3Ava2, Plaat3Ava3],
+    [Plaat4Ava1, Plaat4Ava4, Plaat4Ava2, Plaat4Ava3]
+];
+
+CONST robtarget PlaadiAvadKohal{4,4} := [
+    [Plaat1Ava1Kohal, Plaat1Ava4Kohal, Plaat1Ava2Kohal, Plaat1Ava3Kohal],
+    [Plaat2Ava1Kohal, Plaat2Ava4Kohal, Plaat2Ava2Kohal, Plaat2Ava3Kohal],
+    [Plaat3Ava1Kohal, Plaat3Ava4Kohal, Plaat3Ava2Kohal, Plaat3Ava3Kohal],
+    [Plaat4Ava1Kohal, Plaat4Ava4Kohal, Plaat4Ava2Kohal, Plaat4Ava3Kohal]
+];
+
+PROC PaneKruvi(num kruviNr, num plaatNr, num avaNr)
+    MoveL KruviKohal{kruviNr}, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+    MoveL Kruvi{kruviNr}, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+    SetDO DO_Gripper, 1;
+    WaitDI DI_Attatched, 1;
+    MoveL KruviKohal{kruviNr}, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+    MoveL PlaadiAvadKohal{plaatNr, avaNr}, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+    MoveL PlaadiAvad{plaatNr, avaNr}, v100, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+    WaitTime 2.5;
+    SetDO DO_Gripper, 0;
+    WaitDI DI_Detached, 1;
+
+    !kruvi kinnitamine tootesse
+    IF kruviNr = 1 THEN
+        PulseDO DO_KinnitaKruvi1;
+    ELSEIF kruviNr = 2 THEN
+        PulseDO DO_KinnitaKruvi2;
+    ELSEIF kruviNr = 3 THEN
+        PulseDO DO_KinnitaKruvi3;
+    ELSEIF kruviNr = 4 THEN
+        PulseDO DO_KinnitaKruvi4;
+    ENDIF
+    
+    MoveL PlaadiAvadKohal{plaatNr, avaNr}, v1000, fine, TCP_KruvikeerajaABB_V2\WObj:=wobj0;
+ENDPROC
+PROC plaat1()
+    TPWrite "Plaadi 1 kruvimine algas";
+    FOR i FROM 1 TO 4 DO
+        PaneKruvi i, 1, i;
+    ENDFOR
+    TPWrite "Plaadi 1 kruvimine lõppes";
+ENDPROC
+PROC plaat2()
+    TPWrite "Plaadi 2 kruvimine algas";
+    FOR i FROM 1 TO 4 DO
+        PaneKruvi i, 2, i;
+    ENDFOR
+    TPWrite "Plaadi 2 kruvimine lõppes";
+ENDPROC
+PROC plaat3()
+    TPWrite "Plaadi 3 kruvimine algas";
+    FOR i FROM 1 TO 4 DO
+        PaneKruvi i, 3, i;
+    ENDFOR
+    TPWrite "Plaadi 3 kruvimine lõppes";
+ENDPROC
+PROC plaat4()
+    TPWrite "Plaadi 3 kruvimine algas";
+    FOR i FROM 1 TO 4 DO
+        PaneKruvi i, 4, i;
+    ENDFOR
+    TPWrite "Plaadi 4 kruvimine lõppes";
+ENDPROC
+PROC runPlaat1()
+    plaat1;
+ENDPROC
+ENDMODULE

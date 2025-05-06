@@ -1,0 +1,90 @@
+
+/*
+
+(c) Copyright 2020 ABB
+
+Any unauthorized use, reproduction, distribution,
+or disclosure to third parties is strictly forbidden.
+ABB reserves all rights regarding Intellectual Property Rights
+
+*/
+
+/* Background */
+.fp-components-popup-bg {
+    display: none; /* Will be "block" when visible */
+    position: fixed;
+    z-index: 2147480100;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.7;
+    background-color: white;
+}
+
+/* Main popup window */
+.fp-components-popup {
+    display: none; /* Will be "flex" when visible */
+    position: fixed;
+    z-index: 2147480101;
+    top: calc((100vh - 245px) / 2);
+    left: calc((100vw - 482px) / 2);
+    height: 245px;
+    width: 482px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgb(130,130,130);
+    border-width: 1px;
+    flex-direction: column;
+    box-shadow: 2.5px 2.5px 5px 2.5px rgba(0,0,0,0.1);    
+}
+
+/* Top black border */
+.fp-components-popup > :nth-child(1){
+    display: block;
+    background-color: black;
+    min-height: 3px;
+}
+
+/* Popup content */
+.fp-components-popup > :nth-child(2){
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Header */
+.fp-components-popup > :nth-child(2) > :nth-child(1) {
+    font-weight: 600;
+    margin: 20px;
+}
+
+/* Message */
+.fp-components-popup > :nth-child(2) > :nth-child(2) {
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow-y: auto;
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+/* Bottom container (buttons etc) */
+.fp-components-popup > :nth-child(2) > :nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+
+/* Bottom container (buttons etc), spacer */
+.fp-components-popup > :nth-child(2) > :nth-child(3) > :nth-child(1){
+    flex-grow: 1;
+}
+
+
