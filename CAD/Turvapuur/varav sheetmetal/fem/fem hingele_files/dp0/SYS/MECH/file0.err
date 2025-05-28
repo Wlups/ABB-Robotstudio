@@ -1,0 +1,18 @@
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       16:01:54
+
+ *** WARNING ***                         CP =      18.000   TIME= 16:02:12
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =      20.391   TIME= 16:02:13
+ Material number 111 (used by element 232930) should normally have at    
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** WARNING ***                         CP =      60.359   TIME= 16:02:52
+ The Distributed Sparse Matrix Solver is currently running in the        
+ out-of-core memory mode.  This memory mode may provide significantly    
+ worse performance compared to the in-core memory mode, depending on     
+ the amount of available system memory and I/O speed.  Please monitor    
+ the solver performance to ensure that the large amount of I/O to the    
+ solver files does not create a bottleneck for performance.              
